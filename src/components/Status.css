@@ -1,0 +1,9 @@
+.status{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.status__text{
+  font-weight: 100;
+}

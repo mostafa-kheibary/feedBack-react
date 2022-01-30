@@ -1,0 +1,35 @@
+.feed {
+  margin-inline: auto;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgba(11, 8, 17, 0.192);
+  color: black;
+  padding: 15px 40px 15px 40px;
+  border-radius: 10px;
+  width: 400px;
+}
+.feed__rate {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.151);
+  background-color: rgb(255, 100, 151);
+}
+.feed__content {
+  font-size: 15px;
+  font-weight: 300;
+}
+.feed__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: rgb(255, 49, 49);
+  cursor: pointer;
+}
