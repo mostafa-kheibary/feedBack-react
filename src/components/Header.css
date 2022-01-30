@@ -1,9 +1,11 @@
 header {
+  width: 100%;
+  background-color: white;
   padding: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.096);
 }
 .header__title {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 25px;
   font-weight: 500;

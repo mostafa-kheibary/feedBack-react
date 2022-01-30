@@ -1,4 +1,7 @@
 .status{
+  max-width: 400px;
+  margin-inline: auto;
+  margin-top: 25px;
   font-size: 13px;
   display: flex;
   justify-content: space-between;
