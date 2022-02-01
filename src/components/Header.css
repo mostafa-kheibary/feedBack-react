@@ -1,4 +1,6 @@
 header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   background-color: white;
   padding: 15px;
@@ -6,7 +8,22 @@ header {
 }
 .header__title {
   color: rgb(0, 0, 0);
+  cursor: pointer;
   text-align: center;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
+}
+.btn{
+  width: 100px;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 130ms ease;
+  background-color: rgb(255, 100, 151);
+  color: white;
+}
+
+.btn:hover{
+  transform: scale(1.1);
 }

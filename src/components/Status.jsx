@@ -1,6 +1,6 @@
 import './Status.css'
 function Status({feedback}) {
-  let avrage = feedback.reduce((prev,num)=>(num.rating+prev),0)/feedback.length;
+  let avrage = feedback.reduce((prev,num)=>(num.rate+prev),0)/feedback.length;
   avrage = avrage.toFixed(1); 
   return ( 
     <div className="status">

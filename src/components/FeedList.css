@@ -1,7 +1,14 @@
 .feed-list {
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: column-reverse;
   justify-content: space-around;
+  margin-top: -20px;
+}
+.nothing{
+  margin-top: 25px;
+  color: white;
+  text-align: center;
+  font-weight: 100;
+
 }
