@@ -4,23 +4,36 @@ import AboutPage from './components/page/AboutPage';
 import Header from './components/Header';
 import FeedList from './components/FeedList';
 import Status from './components/Status';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function App() {
+  const base = 'http://localhost:5000';
   const [feedBack, setFeedBack] = useState([]);
-  const [id, setId] = useState(1);
+  useEffect(async () => {
+    const respone = await fetch(`${base}/feedback`);
+    const data = await respone.json();
+    setFeedBack(data);
+  }, []);
   const delteFeed = (id) => {
+    fetch(`${base}/feedback/${id}`, { method: 'DELETE' });
     if (window.confirm('are you going to delete this review ?')) {
       setFeedBack(feedBack.filter((item) => item.id !== id));
     }
   };
-  const submitText = (text, rate) => {
+  const submitText = async (text, rate) => {
     const newFeed = {
-      id: id,
       rate,
       text,
     };
-    setFeedBack([...feedBack, newFeed]);
-    setId(id + 1);
+    const respone = await fetch(`${base}/feedback`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newFeed),
+    });
+    const data = await respone.json();
+    console.log(data);
+    setFeedBack([...feedBack, data]);
   };
   return (
     <BrowserRouter>
